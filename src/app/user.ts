@@ -1,5 +1,15 @@
 export class User {
 
-    constructor(public id:number, public login:any, public url:string, public name:string, public followers:number){}
+    showDescription!:Boolean;
+
+    constructor(
+        public login:string,
+        public url:string,
+        public name:string,
+        public repos:number){
+
+            this.showDescription = false;
+
+        }
 
 }

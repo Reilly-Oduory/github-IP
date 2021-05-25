@@ -2,11 +2,18 @@
     <app-user-searchform></app-user-searchform>
 </div>
 <hr>
-<div class="results">
+<div *ngIf='user.login' class="results">
     <div class="card mb-4">
-        <div class="card-body">
-            <h5 class="card-title text-primary">Username</h5>
-            <a href="" class="btn btn-primary lefted">See user account</a>
+        <div class="card-body" (click)='toggleDetails()'>
+            <h5 class="card-title text-primary">{{ user.login }}</h5>
+            <div *ngIf='user.showDescription'>
+                <span>
+                    <p>Repositories : {{ user.repos }}</p>
+                    <p class="text-muted lefted">User's name is {{ user.name }}</p>
+                </span>
+            </div>
+            <br>
+            <a href="{{ user.url }}" class="btn btn-outline-primary lefted mt-2">See user account</a>
         </div>
     </div>
 </div>

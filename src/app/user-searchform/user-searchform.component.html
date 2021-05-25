@@ -1,8 +1,8 @@
-<form>
+<form #searchForm='ngForm' (ngSubmit)='submitUserName()'>
     <div class="form-group text-center">
         <label for="searchBar">Search Bar</label>
         <br>
-        <input type="text" class="form-control width-increase mb-3 mt-1" name="searchBar" placeholder="Search for a Github user." id="userSearch">
+        <input type="text" class="form-control width-increase mb-3 mt-1" name="login" placeholder="Search for a Github user." [(ngModel)]="login" id="login">
     </div>
     <div class="text-center">
         <button class="btn btn-success">Search</button>

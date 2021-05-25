@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepSearchformComponent implements OnInit {
 
+  submitRepoName(){}
+
   constructor() { }
 
   ngOnInit(): void {

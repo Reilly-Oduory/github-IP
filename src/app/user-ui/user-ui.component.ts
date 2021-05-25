@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserRetrivalService } from '../user-retrival.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-user-ui',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserUIComponent implements OnInit {
 
-  constructor() { }
+  user!:User;
+  userRetrivalService!: UserRetrivalService;
 
-  ngOnInit(): void {
+  toggleDetails(){
+    this.user.showDescription = !this.user.showDescription
+  }
+
+  constructor(userRetrivalService: UserRetrivalService) { 
+    this.userRetrivalService = userRetrivalService;
+  }
+
+  ngOnInit() {
+    this.user = this.userRetrivalService.user
   }
 
 }

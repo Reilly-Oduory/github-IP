@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserRetrivalService } from '../user-retrival.service';
 
 @Component({
   selector: 'app-user-searchform',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserSearchformComponent implements OnInit {
 
-  constructor() { }
+  login!:string;
+  userRetrivalService!: UserRetrivalService;
+
+  submitUserName(){
+    this.userRetrivalService.userRequest(this.login)
+  }
+
+  constructor(userRetrivalService: UserRetrivalService) { 
+    this.userRetrivalService = userRetrivalService
+  }
 
   ngOnInit(): void {
   }
