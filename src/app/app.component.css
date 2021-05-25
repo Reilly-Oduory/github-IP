@@ -1,0 +1,14 @@
+.landing-area {
+    height: 100vh;
+    text-align: center;
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.landing-area h1 {
+    padding-top: 5vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #e23f7d;
+    text-transform: uppercase;
+}
