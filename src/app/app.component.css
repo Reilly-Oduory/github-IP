@@ -1,14 +1,39 @@
 .landing-area {
-    height: 100vh;
-    text-align: center;
+    height: 80vh;
     background-image: url(../images/bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 80vh;
+    overflow-y: hidden;
+    filter: blur(8px);
 }
-.landing-area h1 {
-    padding-top: 5vh;
+.project-title {
+    background: rgb(0, 0, 0);
+    background: rgba(236, 66, 222, 0.4);
+    border: solid;
+    border-color: rgba(236, 66, 222, 0.8);
+    z-index: 2;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    position: absolute;
+    top: 5%;
+    left: 35% ;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #e23f7d;
+    color: #e64294;
     text-transform: uppercase;
+    padding: 0 10vh;
 }
+
+.info {
+    position: absolute;
+    top: 60vh;
+    left: 15% ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #e64294;
+    text-decoration:underline;
+    text-transform: uppercase;
+    filter: blur(0);
+    padding: 0 15%;
+    font-size: 0.5em;
+}
+
