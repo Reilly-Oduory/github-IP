@@ -2,8 +2,8 @@
     <div *ngFor='let repo of repos' class="card mb-4">
         <div class="card-body">
             <h5 class="card-title">{{ repo.name }}</h5>
-            <h6 class="card-subtitle text-muted lefted mb-2">By User</h6>
-            <a href="{{ repo.html_url }}" class="card-link lefted">See repo in github</a>
+            <h6 class="card-subtitle text-muted lefted mb-2">By {{ login }}</h6>
+            <a href="{{ repo.html_url }}" class="card-link mt-4 lefted">See repo in github</a>
         </div>
     </div>
 </div>

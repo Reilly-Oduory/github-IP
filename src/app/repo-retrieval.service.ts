@@ -10,12 +10,14 @@ export class RepoRetrievalService {
   repo!: Repo;
   repoReturn = [];
   newRepoData: any = [];
+  login: string;
 
   constructor(private http: HttpClient) { 
     this.repo = new Repo('','')
   }
 
   repoRequest(login:string) {
+    this.login = login;
     let promise = new Promise((resolve,reject) => {
       this.http.get<any>('https://api.github.com/users/' + login + '/repos').toPromise().then(response => {
         for(let i = 0; i<response.length; i++) {

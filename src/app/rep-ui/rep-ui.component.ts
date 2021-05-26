@@ -11,13 +11,15 @@ export class RepUIComponent implements OnInit {
 
   repoRetrievalService!:RepoRetrievalService;
   repos: any;
+  login: string;
 
   constructor(repoRetrievalService: RepoRetrievalService) { 
     this.repoRetrievalService = repoRetrievalService;
   }
 
   ngOnInit() {
-    this.repos = this.repoRetrievalService.repoReturn
+    this.repos = this.repoRetrievalService.repoReturn;
+    this.login = this.repoRetrievalService.login;
   }
 
 }
