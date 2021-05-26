@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Repo } from '../repo';
+import { RepoRetrievalService } from '../repo-retrieval.service';
 
 @Component({
   selector: 'app-rep-ui',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepUIComponent implements OnInit {
 
-  constructor() { }
+  repoRetrievalService!:RepoRetrievalService;
+  repos: any;
 
-  ngOnInit(): void {
+  constructor(repoRetrievalService: RepoRetrievalService) { 
+    this.repoRetrievalService = repoRetrievalService;
+  }
+
+  ngOnInit() {
+    this.repos = this.repoRetrievalService.repoReturn
   }
 
 }

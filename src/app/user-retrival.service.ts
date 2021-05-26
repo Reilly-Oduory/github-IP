@@ -8,7 +8,6 @@ import { User } from './user';
 export class UserRetrivalService {
 
   user! : User;
-  userReturn = [];
 
   constructor(private http:HttpClient) { 
     this.user = new User('','','',0)

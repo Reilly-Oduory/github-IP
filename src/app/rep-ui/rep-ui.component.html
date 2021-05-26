@@ -1,14 +1,9 @@
-<div class="searchform">
-    <app-rep-searchform></app-rep-searchform>
-</div>
-<hr>
 <div class="results">
-    <div class="card mb-4">
+    <div *ngFor='let repo of repos' class="card mb-4">
         <div class="card-body">
-            <h5 class="card-title">Repo Name</h5>
+            <h5 class="card-title">{{ repo.name }}</h5>
             <h6 class="card-subtitle text-muted lefted mb-2">By User</h6>
-            <p class="card-text text-muted">Forks : 1</p>
-            <a href="" class="card-link lefted">See repo in github</a>
+            <a href="{{ repo.html_url }}" class="card-link lefted">See repo in github</a>
         </div>
     </div>
 </div>
