@@ -1,6 +1,6 @@
 .landing-area {
     height: 80vh;
-    background-image: url(../images/bg.jpg);
+    background-image: url(./images/bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 80vh;
