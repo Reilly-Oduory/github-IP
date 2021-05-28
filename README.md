@@ -11,7 +11,7 @@ Its a project that involves the github api to search for users and there respect
  Angular
 
  ## GH-PAGES
-  [site](https://reilly-oduory.github.io/github-IP/)
+  [site](https://reilly-oduory.github.io/github-IP.github.io/)
 
 
 
